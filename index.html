@@ -1,3 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavínia Tarot</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(180deg,#f9f3ff,#efe3ff);
+    color:#4f3b69;
+}
+
+header{
+    text-align:center;
+    padding:70px 20px;
+}
+
+h1{
+    color:#8a5cff;
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.subtitulo{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+section{
+    max-width:900px;
+    margin:30px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(138,92,255,.12);
+}
+
+h2{
+    color:#8a5cff;
+    margin-bottom:20px;
+}
+
+.planos{
+    display:grid;
+    gap:15px;
+}
+
+.plano{
+    background:#f7f1ff;
+    padding:20px;
+    border-radius:15px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:600;
+}
+
+input, textarea, select{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:1px solid #d9c8ff;
+    border-radius:12px;
+}
+
+textarea{
+    min-height:120px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    border-radius:15px;
+    background:#8a5cff;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+.contato{
+    text-align:center;
+    line-height:2;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#7b6a96;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🔮 Lavínia Tarot</h1>
+
+<p class="subtitulo">
+💜 Bem-vindo(a)!<br><br>
+
+Eu me chamo Lavínia e sou uma taróloga iniciante.
+Faço tiragens com muito carinho e valores acessíveis.
+
+<br><br>
+
+✨ Será um prazer atender você! 🔮🌙
+</p>
+</header>
 
 <section>
 
@@ -9,7 +143,6 @@
 <div class="plano">💜 3 Perguntas — R$ 5,00</div>
 <div class="plano">💜 5 Perguntas — R$ 8,00</div>
 </div>
-
 </div>
 
 <div class="card">
@@ -17,94 +150,72 @@
 
 <ul>
 <li>Não sigo nenhuma religião específica.</li>
-
-<li>Não trabalho com entidades, guias espirituais ou incorporações.</li>
-
-<li>Minhas leituras são feitas com base na interpretação simbólica das cartas do Tarot.</li>
-
+<li>Não trabalho com entidades ou incorporações.</li>
+<li>As leituras são feitas através da interpretação simbólica das cartas.</li>
 <li>Não substitui aconselhamento médico, psicológico, jurídico ou financeiro.</li>
 </ul>
-
 </div>
 
 <div class="card">
 <h2>📋 Formulário de Agendamento</h2>
 
-<form>
+<form action="https://formspree.io/f/xkoeloab" method="POST">
 
 <label>Nome completo</label>
-<input type="text">
+<input type="text" name="nome" required>
 
 <label>Data de nascimento</label>
-<input type="date">
+<input type="date" name="data_nascimento" required>
 
 <label>Instagram ou WhatsApp</label>
-<input type="text">
+<input type="text" name="contato" required>
 
 <label>Tiragem escolhida</label>
-<select>
-<option>1 Pergunta - R$ 2,00</option>
-<option>3 Perguntas - R$ 5,00</option>
-<option>5 Perguntas - R$ 8,00</option>
+<select name="tiragem" required>
+<option value="">Selecione</option>
+<option value="1 Pergunta - R$ 2,00">1 Pergunta - R$ 2,00</option>
+<option value="3 Perguntas - R$ 5,00">3 Perguntas - R$ 5,00</option>
+<option value="5 Perguntas - R$ 8,00">5 Perguntas - R$ 8,00</option>
 </select>
 
 <label>Sua(s) pergunta(s)</label>
-<textarea></textarea>
+<textarea name="perguntas" required></textarea>
 
 <label>Nome da outra pessoa (opcional)</label>
-<input type="text">
+<input type="text" name="outra_pessoa">
 
 <label>Data de nascimento da outra pessoa (opcional)</label>
-<input type="date">
+<input type="date" name="data_outra_pessoa">
 
 <button type="submit">
 Enviar Agendamento
-
-</div>
-
-    
-    <form action="https://formspree.io/f/xkoeloab" method="POST">
-
-  <label>
-    Nome:
-    <input type="text" name="name" required>
-  </label>
-
-  <label>
-    Email:
-    <input type="email" name="email" required>
-  </label>
-
-  <label>
-    Mensagem:
-    <textarea name="message" required></textarea>
-  </label>
-
-  <button type="submit">Enviar</button>
+</button>
 
 </form>
+</div>
+
+<div class="card contato">
 
 <h2>📩 Finalizar Agendamento</h2>
 
 <p>
 Após preencher o formulário e realizar o pagamento,
-envie o comprovante do Pix para um dos contatos abaixo:
+envie o comprovante para:
 </p>
 
 <br>
 
 <p>📷 Instagram: @Aimasyz</p>
-
 <p>📱 WhatsApp: (86) 99552-8181</p>
 
 <br>
 
 <p>
-💜 Seu atendimento será iniciado após a confirmação do pagamento.
+💜 O atendimento será iniciado após a confirmação do pagamento.
 </p>
 
 <p>
-✨ Obrigada pela confiança! Será um prazer atender você. 🔮🌙
+✨ Obrigada pela confiança! 🔮🌙
 </p>
 
 </div>
