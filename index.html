@@ -201,24 +201,27 @@ Enviar Agendamento
 
 </div>
 
-    <!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/xkoeloab"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form> 
     
-<div class="card contato">
+    <form action="https://formspree.io/f/xkoeloab" method="POST">
+
+  <label>
+    Nome:
+    <input type="text" name="name" required>
+  </label>
+
+  <label>
+    Email:
+    <input type="email" name="email" required>
+  </label>
+
+  <label>
+    Mensagem:
+    <textarea name="message" required></textarea>
+  </label>
+
+  <button type="submit">Enviar</button>
+
+</form>
 
 <h2>📩 Finalizar Agendamento</h2>
 
